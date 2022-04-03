@@ -1,0 +1,59 @@
+@import '../../globalStyles/globalStyles.scss';
+
+.slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    
+    .slideWraper {
+        padding: 50px 100px 50px 100px;
+        width: 100%;
+        height: auto;
+        .slideIcon {
+            width: 100%;
+            
+            object-fit: cover;
+        }
+    }
+
+    .left {
+        position: absolute;
+        width: 50px;
+        height: 80px;
+        background-color: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        left: 15px;
+        top: 39%;
+        cursor: pointer;
+        color: $text-white;
+
+        &:hover {
+            background-color: $background-arrow-color;
+        }
+    }
+
+    .right {
+        position: absolute;
+        width: 50px;
+        height: 80px;
+        background-color: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        right: 15px;
+        top: 39%;
+        cursor: pointer;
+        color: $text-white;
+
+        &:hover {
+            background-color: $background-arrow-color;
+        }
+    }
+
+}

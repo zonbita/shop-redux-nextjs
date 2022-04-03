@@ -1,0 +1,76 @@
+@import '../../globalStyles/globalStyles.scss';
+
+.productItem {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 10px;
+    color: rgb(87, 83, 83);
+    position: relative;
+
+    .imgItem {
+        flex: 1;
+        
+        img {
+            width: 100%;
+        }
+    }
+
+    .infoProduct {
+        flex: 2;
+        padding-left: 20px;
+
+        .infoDetail {
+            display: flex;
+            flex-direction: column;
+            
+            span {
+                margin-bottom: 15px;
+            }
+
+            span:nth-child(1) {
+                color: #006bb4;
+            }
+        }
+
+        .amount {
+
+            .amountWrapper {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid rgb(235, 229, 229);
+                    width: 29px;
+                    height: 30px;
+                }
+
+                span:nth-child(1) {
+                    background-color: rgb(224, 221, 221);
+                    cursor: pointer;
+                }
+
+                span:nth-child(3) {
+                    background-color: rgb(224, 221, 221);;
+                    cursor: pointer;
+                }
+            }
+
+            .delIcon {
+                position: absolute;
+                right: 0;
+                bottom: 50px;
+                display: block;
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}

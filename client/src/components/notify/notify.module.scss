@@ -1,0 +1,21 @@
+@import '../../globalStyles/globalStyles.scss';
+
+.notify {
+    height: 40px;
+    width: 100%;
+    background-color: $notify-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-white;
+    font-size: 15px;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        height: 30px;
+        font-size: 10px;
+    }
+
+    span {
+        text-align: center;
+    }
+}

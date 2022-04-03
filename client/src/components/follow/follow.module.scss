@@ -1,0 +1,60 @@
+@import '../../globalStyles/globalStyles.scss';
+
+.follow {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    overflow: hidden;
+    
+    .title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        font-size: 25px;
+        font-weight: 500;
+
+        @media screen and (max-width: $breakpoint-sm) {
+            font-size: 14px;
+        }
+
+        @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+            font-size: 20px;
+        }
+    }
+
+    .followWrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 0;
+
+        .imgIcon {
+            width: 100%;
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background-image: url("https://play-lh.googleusercontent.com/h9jWMwqb-h9hjP4THqrJ50eIwPekjv7QPmTpA85gFQ10PjV02CoGAcYLLptqd19Sa1iJ");
+                opacity: 0.8;
+                background-size: cover;
+                z-index: 99;
+                display: none;
+                cursor: pointer;
+            }
+
+            &:hover::after {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@import '../../globalStyles/globalStyles.scss';
+
+.sideBar {
+    width: 100%;
+    min-height: 100%;
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $gray;
+        margin-bottom: 20px;
+        
+        .title {
+            font-size: 18px;
+            position: relative;
+            margin-bottom: 20px;
+            color:rgb(61, 59, 59);
+            cursor: pointer;
+
+            .showIcon {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 10px;
+            }
+        }
+
+        .wrapper {
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            color: rgb(73, 70, 70);
+            font-size: 14px;
+
+            .items {
+                margin-bottom: 15px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+
+                .checkbox {
+                    display: block;
+                    width: 14px;
+                    height: 14px;
+                    border: 1px solid black;
+                    margin-left: 0;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

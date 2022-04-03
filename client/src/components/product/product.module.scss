@@ -1,0 +1,54 @@
+@import '../../globalStyles/globalStyles.scss'; 
+
+.product {
+    width: 100%;
+
+    .imgIcon {
+        position: relative;
+
+        img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        &::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: none;
+        }
+
+        &:hover::after {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    .infoProduct {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 8px;
+        margin-top: 8px;
+        
+        a {
+            text-decoration: none;
+            color: $text-black;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        span {
+            margin-top: 10px;
+            font-weight: 700;
+        }
+
+    }
+}

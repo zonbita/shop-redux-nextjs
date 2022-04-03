@@ -1,0 +1,119 @@
+@import '../../globalStyles/globalStyles.scss';
+
+.infoMe {
+    display: flex;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        width: 100%;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+        width: 100%;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .options {
+        flex: 1;
+        height: 150px;
+        margin-top: 70px;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+
+        @media screen and (max-width: $breakpoint-sm) {
+            margin-bottom: 10px;
+        }
+
+        @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+            margin-bottom: 10px;
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            cursor: pointer;
+
+            @media screen and (max-width: $breakpoint-sm) {
+                padding: 10px 10px;
+            }
+    
+            @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+                padding: 10px 10px;
+            }
+
+            &:hover {
+                border-left: 3px solid red;
+            }
+        }
+    }
+
+    .info {
+        flex: 5;
+        margin-left: 100px;
+        width: 100%;
+
+        @media screen and (max-width: $breakpoint-sm) {
+            flex: 1;
+            margin-left: 10px;
+            margin-bottom: 100px;
+        }
+
+        @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+            flex: 1;
+            margin-left: 10px;
+            margin-bottom: 100px;
+        }
+
+        .title {
+            margin-top: 70px;
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .acc {
+            font-size: 18px;
+            display: block;
+            border-bottom: 1px solid $gray;
+            padding-bottom: 10px;
+        }
+
+        .infoAccount {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            
+            span:nth-child(1) {
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+
+            span:nth-child(2) {
+                margin-bottom: 13px;
+            }
+
+            span:nth-child(3) {
+                margin-bottom: 13px;
+            }
+
+            span:nth-child(4) {
+                font-size: 13px;
+                color: #67b9e5;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}

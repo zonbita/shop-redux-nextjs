@@ -1,0 +1,167 @@
+@import '../../globalStyles/globalStyles.scss';
+
+.productPage {
+    display: grid;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    margin-top: 50px;
+    height: auto;
+    overflow-x: hidden;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .sideBar {
+        grid-column: 1/2;
+        margin-top: 5px;
+
+        @media screen and (max-width: $breakpoint-sm) {
+            grid-column: 1/2;
+            width: 100%;
+            padding-left: 20px;
+        }
+    
+        @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+            grid-column: 1/2;
+            width: 100%;
+            padding-left: 20px;
+        }
+    }
+
+    .products {
+        grid-column: 2/5;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        @media screen and (max-width: $breakpoint-sm) {
+            grid-column: 1/2;
+        }
+    
+        @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+            grid-column: 1/2;
+        }
+
+        .title {
+            font-size: 25px;
+            margin-bottom: 20px;
+            margin-top: 5px;
+
+            @media screen and (max-width: $breakpoint-sm) {
+                padding-left: 20px;
+            }
+        
+            @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+                padding-right: 20px;
+            }
+        }
+
+        .banner {
+            width: 100%;
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        .sort {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: rgb(56, 55, 55);
+
+            span {
+                margin-left: 20px;
+
+                i {
+                    margin-left: 5px;
+                }
+
+                @media screen and (max-width: $breakpoint-sm) {
+                    font-size: 12px;
+                    padding-right: 5px;
+                }
+            
+                @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+                    
+                }
+            }
+
+            span:nth-child(2) {
+                cursor: pointer;
+                
+                &:hover {
+                    color: rgb(158, 19, 19);
+                }
+            }
+
+            span:nth-child(3) {
+                cursor: pointer;
+
+                &:hover {
+                    color: rgb(158, 19, 19);
+                }
+            }
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            margin-bottom: 50px;
+            width: 100%;
+
+            @media screen and (max-width: $breakpoint-sm) {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            }
+        
+            @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            }
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+
+            span {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                padding: 5px;
+                width: 30px;
+                height: 30px;
+                margin-left: 20px;
+                font-size: 18px;
+                font-weight: 700;
+                padding: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(73, 71, 71);
+                    color: white;
+                    border-radius: 50%;
+                }
+            }
+
+            span:nth-child(2) {
+                border: 1px solid black;
+            }
+        } 
+    }
+}

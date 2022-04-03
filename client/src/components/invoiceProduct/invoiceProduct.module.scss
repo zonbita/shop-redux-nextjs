@@ -1,0 +1,57 @@
+@import '../../globalStyles/globalStyles.scss';
+
+.invoiceProduct {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted $gray;
+
+    .imgItem {
+        flex: 1;
+        width: 100%;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .info {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+
+        .nameProduct {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .code {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .amount {
+            position: relative;
+
+            .delIcon {
+                position: absolute;
+                right: 0;
+                cursor: pointer;
+
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+}

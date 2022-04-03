@@ -1,0 +1,386 @@
+@import '../../globalStyles/globalStyles.scss';
+
+
+// CSS HEADER
+@keyframes fadeIn {
+    from {
+        width: 0;
+        opacity: 0.8;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+    color: $text-white;
+    .container {
+        width: 1200px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+
+        @media screen and (max-width: $breakpoint-sm) {
+            width: 100%;
+        }
+
+        @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+            width: 100%;
+        }
+
+        .left {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+
+            @media screen and (max-width: $breakpoint-sm) {
+                justify-content: center;
+                width: 100%;
+            }
+    
+            @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+                justify-content: center;
+                width: 100%;
+            }
+
+            .menu {
+                display: none;
+
+                // &:hover {
+                //     cursor: pointer;
+                // }
+
+                @media screen and (max-width: $breakpoint-sm) {
+                    display: inline-block;
+                    font-size: 30px;
+                    position: absolute;
+                    left: 15px;
+                }
+        
+                @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+                    display: inline-block;
+                    font-size: 30px;
+                    position: absolute;
+                    left: 15px;
+                }
+
+                .listResp {
+                    display: none;
+                    overflow: hidden;
+                    position: fixed;
+                    top: 75px;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    background-color: white;
+                    animation: fadeIn 0.2s ease;
+
+                    .collectItem {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 20px;
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            height: 30px;
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                            border-bottom: 1px solid $gray;
+                            padding: 15px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .option {
+                        display: flex;
+                        justify-content: space-around;
+                        position: absolute;
+                        bottom: 15px;
+                        left: 0;
+                        right: 0;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            img {
+                width: 73px;
+                height: 49px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .list {
+                margin-left: 90px;
+
+                @media screen and (max-width: $breakpoint-sm) {
+                    display: none;
+                }
+        
+                @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+                    display: none;
+                }
+
+                span {
+                    margin: 0 0 12px 12px;
+                    padding: 0 0 5px 5px;
+                    font-weight: 500;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .cart {
+                display: none;
+                position: relative;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                @media screen and (max-width: $breakpoint-sm) {
+                    display: inline-block;
+                    position: absolute;
+                    right: 15px;
+                    font-size: 25px;
+                }
+        
+                @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+                    display: inline-block;
+                    position: absolute;
+                    right: 15px;
+                    font-size: 25px;
+                }
+
+                .count {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: #e41e3f;
+                    color: #fce9ec;
+                    top: -12px;
+                    right: -10px;
+                    font-size: 15px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-left: 218px;
+
+            @media screen and (max-width: $breakpoint-sm) {
+                display: none;
+            }
+    
+            @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+                display: none;
+            }
+
+            .search {
+                position: relative;
+                margin-right: 30px;
+
+                input {
+                    width: 230px;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none;
+                    border-bottom: 2px solid #8a8e9b;
+                    padding: 5px;
+                    font-style: bold;
+                    border-radius: 5px;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .iconSearch {
+                    position: absolute;
+                    right: 6px;
+                    bottom: 5px;
+                    color: $gray;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+            }
+
+            .listIcon {
+                position: relative;
+
+                i:nth-child(1) {
+                    margin-right: 15px;
+                }
+
+                i:nth-child(2) {
+                    margin-right: 15px;
+                }
+
+                i {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .count {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background-color: #e41e3f;
+                    color: #fce9ec;
+                    top: -13px;
+                    right: -9px;
+                    font-size: 12px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+
+// CSS CARD
+.cartProducts {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 470px;
+    z-index: 9999;
+    background-color: white;
+    overflow-y: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        width: 0 !important;
+        display: none; 
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        width: 100%;
+    }
+
+    // @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+    //     width: 100%;
+    // }
+
+    .backgroundOrder {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        width: calc(100% - 470px);
+        background-color: rgba(0, 0, 0, 0.5);
+
+        @media screen and (max-width: $breakpoint-sm) {
+            display: none;
+        }
+    
+        // @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+        //     display: none;
+        // }
+    }
+
+    .title {
+        display: flex;
+        width: 100%;
+        height: 45px;
+        background-color: #dedede;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        font-weight: 500;
+        font-size: 20px;
+
+        .exitIcon {
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .products {
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    .total {
+        position: fixed;
+        right: 0;
+        left: calc(100% - 470px);
+        bottom: 0;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: $breakpoint-sm) {
+            width: 100%;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        // @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg){
+        //     width: 100%;
+        //     right: 0;
+        //     left: 0;
+        //     bottom: 0;
+        // }
+
+        .sumProducts {
+            height: 60px;
+            width: 100%;
+            background-color: #595959;
+            display: flex;
+            align-items: center;
+            color: $text-white;
+            justify-content: space-around;
+            opacity: 0;
+        }
+
+        .order {
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $bg-black;
+            color: white;
+        }
+    }
+
+}
